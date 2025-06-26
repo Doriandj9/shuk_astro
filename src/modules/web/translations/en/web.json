@@ -1,0 +1,259 @@
+{
+    "login": {
+        "header": {
+            "title": "Log in to your account",
+            "aside": "Start making your dreams come true"
+        },
+        "inputs": {
+            "email": {
+                "placeholder": "Enter your email"
+            },
+            "password": {
+                "placeholder": "Enter your password"
+            }
+        },
+        "buttons": {
+            "login": "Continue with email",
+            "google": "Continue with Google",
+            "facebook": "Continue with Facebook"
+        },
+        "labels": {
+            "not-account": "You don't have a shuk account?",
+            "register-account": "Register here",
+            "problems-login": "Having issues?",
+            "contact": "Contact us",
+            "or": "or",
+            "add": "Add",
+            "recovery-password-title": "Recover your password",
+            "notify-forward-password": "We’ve sent a password reset link to your email. <br> You have one hour to complete the process before it expires."
+        }
+    },
+    "register": {
+        "messages": {
+            "success-initial-register": "Thank you for completing your registration. We've sent an email to the address you provided to confirm that you are the person who wishes to register.<br> To complete the process and complete the last step of registration, please follow the link we sent to your email.<br>If you don't see the email in your inbox, please also check your spam or junk folder.<br>Thank you for registering and welcome!"
+        },
+        "header": {
+            "title": "Register on SHUK"
+        },
+        "inputs": {
+            "full-name": {
+                "label": "First and last names",
+                "placeholder": "Ex: John Michael Anderson."
+            },
+            "email": {
+                "label": "Email",
+                "placeholder": "Ex: jhon@mail.com"
+            },
+            "birthday": {
+                "label": "Birthdate",
+                "placeholder": ""
+            },
+            "phone": {
+                "label": "Cell phone number",
+                "placeholder": "Ex: +1 (555) 123-4567"
+            },
+            "username": {
+                "label": "Username",
+                "placeholder": "Ex: tito123"
+            },
+            "nationality": {
+                "label": "Nationality",
+                "placeholder": "Ex: United States"
+            },
+            "gender": {
+                "label": "Gender",
+                "placeholder": "Ex: Men"
+            },
+            "about-me": {
+                "label": "About me",
+                "placeholder": "Ex: I am a calm person"
+            },
+            "new-password": {
+                "label": "New password",
+                "placeholder": "Ex: ******"
+            },
+            "odl-password": {
+                "label": "Old password",
+                "placeholder": "Ex: ******"
+            },
+            "repeat-password": {
+                "label": "Re-type new password",
+                "placeholder": "Ex: ******"
+            },
+            "category-name": {
+                "label": "Name",
+                "placeholder": "Ex: Family"
+            },
+            "category-icon": {
+                "label": "Icon SVG",
+                "placeholder": "Ex: <svg>...."
+            }
+        },
+        "buttons": {
+            "save": "Continue with registration",
+            "new-category": "Create category"
+        },
+        "labels": {
+            "whit-account": "Do you have an account?",
+            "login": "Sign in",
+            "save-post": "Congratulations on your post.",
+            "preview": "Preview",
+            "forward-password": "Forgot my password?"
+        }
+    },
+    "validations": {
+        "messages": {
+            "email-required": "Email field is required",
+            "password-required": "The password field is required",
+            "email-type": "The email is invalid",
+            "full-name-required": "The first and last names field is required",
+            "full-name-min": "Enter a minimum of 3 characters",
+            "birthday-required": "The birthday field is required",
+            "phone-required": "The cell phone number field is required",
+            "nan-type-post": "Error no post type was selected",
+            "nan-img-post": "No image was selected for publication",
+            "nan-payload-post": "You cannot post empty content",
+            "min-length": "Enter a minimum of {count} characters",
+            "max-length": "Enter a maximum of {count} characters",
+            "special-characters": "Enter at least {count} special characters",
+            "letters-uppercase": "Enter at least {count} uppercase letters",
+            "number-count": "Enter at least {count} numbers",
+            "one-img-post": "You cannot drag more than one image per post",
+            "empty-img-post": "I don't drag an image",
+            "not-img-post": "The dragged file is not an image",
+            "unknown-img-post": "There was an error when trying to upload the file",
+            "not-selected-img": "I don't select an image",
+            "password-type": "The password must contain at least one uppercase letter, one lowercase letter, one number, and one special character.",
+            "password-confirm": "The password and confirmation password do not match.",
+            "fiel-required": "This field is required",
+            "number-invalid": "Not a valid number",
+            "not_number_negative": "Cannot be a negative number"
+        }
+    },
+    "titles": {
+        "create-post": "Create new post",
+        "new-category": "New category",
+        "edit-category": "Edit category",
+        "categories": "Categories",
+        "drop-file": "Drag a file.",
+        "file-search": "Search file.",
+        "drag-file": "Release the image",
+        "tag-post": "Tag the post in one or more categories",
+        "edit-post": "Edit post",
+        "users": "Users",
+        "reports": "Reports",
+        "type": "Type",
+        "total": "Total"
+    },
+    "descriptions": {
+        "post": "Post",
+        "post-text": "Text post",
+        "post-img": "Image post",
+        "post-video": "Video post",
+        "exit-post": "This page asks you to confirm that you want to log out; the information you have entered may not be saved.",
+        "share-idea": "Share your idea...",
+        "posts": "Publications",
+        "details": "Details",
+        "statistics": "Statistics",
+        "your-post": "Publications",
+        "account": "Account",
+        "profile": "Profile",
+        "privacy-safety": "Privacy & safety",
+        "password": "Password",
+        "save-changes": "Save changes",
+        "upload-image": "Upload image",
+        "avatar": "Avatar",
+        "none": "None",
+        "language": "Language",
+        "has-notify-mail": "Allow email notifications",
+        "has-notify-app": "Allow app notifications",
+        "hidden-mail": "Allow app notifications",
+        "hidden-phone": "Hide cell phone number",
+        "theme-app": "Select the application theme",
+        "hidden-posts": "It doesn't have a configuration please believe me in configuration",
+        "post-already-hidden": "The post is already hidden"
+    },
+    "helpers": {
+        "email-not-show": "Email will not be displayed publicly.",
+        "username-unique": "It must be a unique name"
+    },
+    "columns": {
+        "created_at": "Creation date",
+        "updated_at": "Update date",
+        "actions": "Actions",
+        "category": {
+            "name": "Category name",
+            "icon": "Category icon"
+        },
+        "users": {
+            "name": "Full Name",
+            "email": "Email",
+            "username": "Username",
+            "phone": "Contact Number"
+        }
+    },
+    "notifications": {
+        "new-notification": "Shared a new post",
+        "like-post": "I liked your post",
+        "comment-post": "I comment on your post"
+    },
+    "privacy": {
+        "privacy-polity": {
+            "title": "Privacy Policy",
+            "Proteccion de Datos Personales": "Personal Data Protection",
+            "a proteccion": "We comply with the <strong>Organic Law on Personal Data Protection</strong> and other applicable regulations in Ecuador. We only collect necessary information, handle it confidentially, and use it solely with your consent for specific purposes.",
+            "b proteccion": "You have the right to access, rectify, or delete your data.",
+            "Requisitos de Edad": "Age Requirements",
+            "parrafo requisitos": "Our site is intended exclusively for individuals over 18 years old. By using SHUK, you confirm that you are of legal age to access motivational and personal development content.",
+            "Seguridad Tecnica": "Technical Security",
+            "a seg tec": "Secure browsing with HTTPS and TLS encryption",
+            "b seg tec": "Administrative access protected with strong passwords.",
+            "c seg tec": "Protection against common attacks (XSS, CSRF, injections)",
+            "d seg tec": "Encrypted backups",
+            "e seg tec": "Continuous monitoring of suspicious activity",
+            "Privacidad de Sesiones": "Session Privacy",
+            "parrafo sesiones": "Sessions expire after prolonged inactivity to protect your account",
+            "Transparencia y Control": "Transparency and Control",
+            "a transparencia": "We do not sell or share your personal information with third parties",
+            "b transparencia": "You can consult our Privacy Policy at any time",
+            "c transparencia": "In case of a data breach, you will be promptly notified",
+            "Modificaciones y Terminación": "Modifications and Termination",
+            "a modificadores": "The <strong>SHUK</strong> platform reserves the right to modify, suspend, or terminate services at any time without prior notice.",
+            "b modificadores": "Users will be notified of any changes to the privacy policies through the <strong>SHUK</strong> platform and electronic means."
+        }
+    },
+    "terms-of-service": {
+    "privacy-polity": {
+        "title": "Terms and Conditions",
+        "description": "These Terms and Conditions govern the use of the website and services offered by <strong>SHUK</strong>, a platform dedicated to personal motivation and life reflections. Our purpose is to inspire, support, and provide value through content such as messages and videos. By accessing, browsing, or using any of our services, you expressly agree to comply with these Terms and Conditions, as well as with the current privacy and data use policies.",
+        "Definiciones": "Definitions",
+        "a Definiciones": "<strong>User:</strong> A person who browses, accesses, or uses the services offered by SHUK.",
+        "b Definiciones": "<strong>Content:</strong> Motivational posts, videos, texts, and any other material shared by SHUK.",
+        "c Definiciones": "<strong>Platform:</strong> Official website and social media accounts associated with SHUK.",
+        "Requisitos de Edad": "Age Requirements",
+        "parrafo requisitos": "Our website is intended for individuals over the age of 18. By using our services, you confirm that you meet this age requirement or have the required legal consent.",
+        "Uso del Sitio": "Site Usage",
+        "a Uso del Sitio": "The user agrees to use the SHUK platform in an ethical, legal, responsible, and respectful manner, in line with its motivational purpose.",
+        "b Uso del Sitio": "It is strictly prohibited to reproduce, distribute, or use the content published on SHUK for commercial or promotional purposes without prior written authorization.",
+        "c Uso del Sitio": "Comments, opinions, or contributions made by users must use respectful language and must not violate the rights, dignity, or beliefs of others.",
+        "Registro": "<strong>Registration:</strong> You agree to the terms and conditions at all times when using the service.",
+        "a Registro": "Only individuals over the age of 18 or those of legal age according to the laws of their country of residence may access and use the website.",
+        "b Registro": "We reserve the right to reject registration requests at our sole discretion and without the obligation to provide a specific reason.",
+        "c Registro": "Before using the service, you must personally complete the registration form and read and accept the terms and conditions published on the platform.",
+        "d Registro": "To ensure transparency, SHUK may request documentation to verify the user’s identity when necessary.",
+        "Protección de Datos Personales": "Personal Data Protection",
+        "a Protección de Datos Personales": "We comply with the <strong>Organic Law on Personal Data Protection</strong> and other applicable regulations in Ecuador. We collect only the necessary information, treat it confidentially, and use it only with your consent for specific purposes.",
+        "b Protección de Datos Personales": "You have the right to access, rectify, or delete your data.",
+        "Propiedad Intelectual": "Intellectual Property",
+        "parrafo Propiedad Intelectual": "All SHUK content is protected by copyright. Total or partial reproduction without the express authorization of the rights holder is not allowed.",
+        "Prohibiciones de usuarios": "User Prohibitions",
+        "a Prohibiciones de usuarios": "Each user is responsible for maintaining the confidentiality of their personal information, including their account and password. SHUK is not responsible for the misuse of this information by third parties if it occurs due to the user's negligence or direct action.",
+        "b Prohibiciones de usuarios": "The use of offensive, discriminatory, vulgar, or obscene language is not permitted anywhere on the site, including usernames, emails, passwords, or other registration fields. SHUK reserves the right to restrict or suspend access to those who violate this rule in order to protect community harmony.",
+        "c Prohibiciones de usuarios": "It is not allowed to publish content that does not align with SHUK’s purpose, such as offensive, political, advertising material, or anything unrelated to personal motivation and life reflections.",
+        "Modificaciones y Terminación": "Modifications and Termination",
+        "a Modificaciones y Terminación": "The <strong>SHUK</strong> platform reserves the right to modify, suspend, or terminate services at any time without prior notice.",
+        "b Modificaciones y Terminación": "Users will be notified of any changes to the terms, conditions, and privacy policies through the <strong>SHUK</strong> platform and electronic means."
+    }
+}
+
+}

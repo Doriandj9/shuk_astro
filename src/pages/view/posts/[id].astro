@@ -1,0 +1,46 @@
+---
+export const prerender = false;
+
+import { api } from "@/config/app";
+import type { PostData } from "@/modules/web/hooks/post/PostI";
+import { PostWrapper } from "@/wrapers/PostWrapper";
+const { id } = Astro.params;
+let errorApi: null | Error = null;
+let post: PostData | null = null;
+try {
+  const response = await api.get(`post/${id}`);
+
+  const data: { status: boolean; message: "OK"; data: PostData } =
+    await response.data;
+  post = data.data;
+} catch (error) {
+  if (
+    typeof error === "object" &&
+    error &&
+    Reflect.has(error, "name") &&
+    Reflect.has(error, "message")
+  ) {
+    errorApi = {
+      name: Reflect.get(error, "name") || "Server",
+      message: Reflect.get(error, "message") || "Not found",
+    };
+  } else {
+    errorApi = {
+      name: "Server",
+      message: "Not found",
+    };
+  }
+}
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>{post?.description}</title>
+    <meta name="description" content={post?.description || ""} />
+    <meta property="og:title" content={post?.description} />
+  </head>
+  <body>
+    <PostWrapper client:only="react" post={post} error={errorApi} />
+  </body>
+</html>

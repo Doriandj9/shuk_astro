@@ -1,0 +1,10 @@
+---
+type Props = {
+    property: string;
+    content: string;
+};
+
+const { property, content } = Astro.props;
+---
+
+<meta property={property} content={content} />

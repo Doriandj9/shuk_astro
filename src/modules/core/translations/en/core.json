@@ -1,0 +1,125 @@
+{
+    "header": {
+        "search-placeholder": "Search on SHUK",
+        "search-posts": "Search for any publication in your language",
+        "login": "Sign Up/Log In",
+        "thanks-like": "Thanks for your like",
+        "not like": "We are sorry you don't like it."
+    },
+    "menu": {
+        "menu": "Menu",
+        "profile": "My profile",
+        "home": "Home",
+        "posts": "Posts",
+        "statistics": "Statistics",
+        "messages": "Messages",
+        "notifications": "Notifications",
+        "users": "Users"
+    },
+    "post": {
+        "introduction": "We know about your desire to share your ideals, make a new post and share with the SHUK community",
+        "new": "New Post"
+    },
+    "messages": {
+        "errors": {
+            "requests": {
+                "off-server": "The server is not responding",
+                "unknown": "Unknown error while trying to query the API"
+            },
+            "post": {
+                "not-type": "No post type entered",
+                "not-payload": "No content was entered to be published",
+                "not-file": "No photo or video was entered for posting",
+                "server": "Oops! Something went wrong. Try reloading the page."
+            },
+            "comment": {
+                "not-payload": "No content was entered to be published",
+                "server": "Oops! Something went wrong. Try reloading the page.",
+                "min-length": "The comment must have at least 3 characters"
+            },
+            "shared": {
+                "copy-link": "Error copying link"
+            }
+        },
+        "labels": {
+            "post": {
+                "click-here": "Click here",
+                "end-posts": "And that's all for now! We've reached the end of the posts, but don't worry, more will be coming soon!",
+                "see-more": "See more",
+                "see-less": "See less",
+                "view-post": "View post",
+                "shared": "Share",
+                "hidden": "Disguise",
+                "delete": "Delete",
+                "edit": "Edit",
+                "download-image": "Download image"
+            },
+            "comment": {
+                "write": "Write a comment...",
+                "send": "Send",
+                "comments": "Comments",
+                "end-comments": "And that's all for now! We've reached the end of the comments for this post, but don't worry, more will be coming soon!"
+            },
+            "notifications": {
+                "end-notifications": "You have no more notifications today, more will surely arrive soon."
+            },
+            "app": {
+                "dark": "Dark",
+                "light": "Light",
+                "system": "System",
+                "update-success": "Update successful",
+                "loading": "Loading...",
+                "close": "Close",
+                "return": "Go back",
+                "sure-continue": "Are you sure you want to continue?",
+                "not-resource": "This requested resource is not available",
+                "privacy": "Privacy",
+                "conditions": "Conditions"
+            }
+        },
+        "success": {
+            "post": {
+                "created": "Post created successfully",
+                "updated": "Post updated successfully",
+                "deleted": "Post deleted successfully"
+            },
+            "comment": {
+                "created": "Comment created successfully",
+                "updated": "Comment updated successfully",
+                "deleted": "Comment deleted successfully"
+            },
+            "shared": {
+                "share": "Share this post",
+                "copy-link": "Copy link",
+                "link-copied": "Link copied"
+            },
+            "category": {
+                "created": "Category created successfully",
+                "updated": "Category updated successfully",
+                "deleted": "Category deleted successfully"
+            }
+        }
+    },
+    "mobile": {
+        "menu": {
+            "configuration": "Configuration",
+            "login": "Login",
+            "logout": "Log Out",
+            "account-setting": "Account setting",
+            "administration": "Administration",
+            "notifications": "Notifications"
+        }
+    },
+    "titles": {
+        "home": "Home",
+        "terms-service": "Terms of Service",
+        "forward-password": "Recover Your Password",
+        "dashboard-admin": "Admin Dashboard",
+        "dashboard-admin-statistics": "Admin Dashboard | Statistics",
+        "dashboard-admin-categories": "Admin Dashboard | Categories",
+        "dashboard-admin-users": "Admin Dashboard | Users",
+        "not_mails": "Stop receiving emails",
+        "manager-digital-educas": "General Manager of DigitalEducas",
+        "privacy-policy": "Privacy Policy"
+    }
+}

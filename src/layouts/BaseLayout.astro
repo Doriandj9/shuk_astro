@@ -1,0 +1,165 @@
+---
+import MetaHtml from "@/components/MetaHtml.astro";
+import "./../styles/main.css";
+import AppLayout from "@/modules/core/layouts/AppLayout";
+
+type MetaDataType = {
+    property: string;
+    content: string;
+};
+type Props = {
+    metadata?: MetaDataType[];
+};
+
+const { metadata } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- FAVICON -->
+        <link
+            rel="apple-touch-icon"
+            sizes="57x57"
+            href="/src/assets/favicon/apple-icon-57x57.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="60x60"
+            href="/src/assets/favicon/apple-icon-60x60.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="72x72"
+            href="/src/assets/favicon/apple-icon-72x72.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="76x76"
+            href="/src/assets/favicon/apple-icon-76x76.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="114x114"
+            href="/src/assets/favicon/apple-icon-114x114.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="120x120"
+            href="/src/assets/favicon/apple-icon-120x120.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="144x144"
+            href="/src/assets/favicon/apple-icon-144x144.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="152x152"
+            href="/src/assets/favicon/apple-icon-152x152.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/src/assets/favicon/apple-icon-180x180.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="/src/assets/favicon/android-icon-192x192.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/src/assets/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="96x96"
+            href="/src/assets/favicon/favicon-96x96.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/src/assets/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/src/assets/favicon/manifest.json" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- Meta Etiquetas para Español -->
+        <meta
+            name="description"
+            content="Shuk es una plataforma social innovadora que conecta a personas a través de imágenes y contenido visual. Disponible en español e inglés, Shuk facilita la interacción y el intercambio cultural en un entorno digital inclusivo."
+        />
+        <meta
+            name="keywords"
+            content="Shuk, plataforma social, imágenes, contenido visual, interacción digital, cultura, comunidad, red social, Ecuador, plataforma multilingüe"
+        />
+        <meta name="language" content="es-EC" />
+        <meta property="og:locale" content="es_EC" />
+        <meta
+            property="og:title"
+            content="Shuk - Plataforma Social de Imágenes"
+        />
+        <meta
+            property="og:description"
+            content="Conecta con personas de todo el mundo a través de imágenes y contenido visual en Shuk. Disponible en español e inglés."
+        />
+        <meta property="og:url" content="https://shuk.ec" />
+        <meta property="og:image" content="/" />
+        <meta property="og:type" content="website" />
+
+        <!-- Meta Etiquetas para Inglés -->
+        <meta
+            name="description"
+            content="Shuk is an innovative social platform that connects people through images and visual content. Available in Spanish and English, Shuk facilitates interaction and cultural exchange in an inclusive digital environment."
+        />
+        <meta
+            name="keywords"
+            content="Shuk, social platform, images, visual content, digital interaction, culture, community, social network, Ecuador, multilingual platform"
+        />
+        <meta name="language" content="en-US" />
+        <meta property="og:locale" content="en_US" />
+        <meta
+            property="og:title"
+            content="Shuk - Image-Based Social Platform"
+        />
+        <meta
+            property="og:description"
+            content="Connect with people worldwide through images and visual content on Shuk. Available in Spanish and English."
+        />
+        <meta property="og:url" content="https://shuk.ec" />
+        <meta property="og:image" content="/shuk_logo.png" />
+        <meta property="og:type" content="website" />
+        <!--  -->
+
+        {
+            metadata?.map((data) => {
+                return (
+                    <MetaHtml property={data.property} content={data.content} />
+                );
+            })
+        }
+        <meta name="author" content="DigitalEducas" />
+        <meta name="author" content="Dorian Armijos" />
+        <!-- <ClientRouter /> -->
+        <title>Shuk</title>
+    </head>
+
+    <body>
+       <div>
+            <AppLayout client:only="react">
+                <slot />
+            </AppLayout>
+       </div>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import LoginComponent from "@/modules/web/pages/Login/Login";
+import { LoginWrapper } from "@/wrapers/LoginWrapper";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login</title>
+    </head>
+    <body>
+        <LoginWrapper client:only="react" />
+    </body>
+</html>
