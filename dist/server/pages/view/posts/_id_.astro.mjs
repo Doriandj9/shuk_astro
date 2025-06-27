@@ -10,7 +10,7 @@ const apiWhatsAppHost = "https://api.whatsapp.com/send";
 const shareFacebookHost = "https://www.facebook.com/sharer/sharer.php";
 const idFacebook = "1896772931078211";
 const idGoogle = "688681171370-3vstsdcqqni44798pbstcbik4fr5n6ta.apps.googleusercontent.com";
-const hostApp = "http://localhost:5173";
+const hostApp = "https://shuk.ec";
 const emailContact = "shuk@email.com";
 const app = {
   server: `${host}${endPointApi}/`,
@@ -57,6 +57,27 @@ const api = axios.create({
   }
 });
 
+const webRoutes = {
+  view_posts: {
+    path: "/view/posts/:id"}};
+
+const appLoadImage = (pathImage) => {
+  const path = `${app.base_server}${pathImage}`;
+  return path;
+};
+
+const serializeText = (text) => {
+  const result = decodeHTMLEntities(
+    text.replaceAll(/<br>/g, "\n\r").replaceAll(/(<)(\w+)(>)/g, "").replaceAll(/(<\/)(\w+)(>)/g, "")
+  );
+  return result;
+};
+const decodeHTMLEntities = (text) => {
+  const txt = document.createElement("textarea");
+  txt.innerHTML = text;
+  return txt.value;
+};
+
 const $$Astro = createAstro("https://shuk.ec");
 const prerender = false;
 const $$id = createComponent(async ($$result, $$props, $$slots) => {
@@ -82,7 +103,7 @@ const $$id = createComponent(async ($$result, $$props, $$slots) => {
       };
     }
   }
-  return renderTemplate`<html lang="es"> <head><meta charset="utf-8"><title>${post?.description}</title><meta name="description"${addAttribute(post?.description || "", "content")}><meta property="og:title"${addAttribute(post?.description, "content")}>${renderHead()}</head> <body> ${renderComponent($$result, "PostWrapper", null, { "client:only": "react", "post": post, "error": errorApi, "client:component-hydration": "only", "client:component-path": "@/wrapers/PostWrapper", "client:component-export": "PostWrapper" })} </body></html>`;
+  return renderTemplate`<html lang="es"> <head><meta property="og:url"${addAttribute(`${app.host}${webRoutes.view_posts.path.replace(":id", String(post?.id))}`, "content")}><meta property="og:type" content="article"><meta property="og:title"${addAttribute(`${serializeText(post?.description || post?.title || "")}`, "content")}><meta property="og:description"${addAttribute(`${serializeText(post?.description || post?.title || "")}`, "content")}><meta property="og:image"${addAttribute(`${appLoadImage(post?.img?.path || "")}`, "content")}><meta property="og:image:alt"${addAttribute(`${serializeText(post?.description ?? "")}`, "content")}><meta property="fb:app_id"${addAttribute(`${app.oAuthIdFacebook}`, "content")}><meta charset="utf-8"><title>${post?.description}</title>${renderHead()}</head> <body> ${renderComponent($$result, "PostWrapper", null, { "client:only": "react", "post": post, "error": errorApi, "client:component-hydration": "only", "client:component-path": "@/wrapers/PostWrapper", "client:component-export": "PostWrapper" })} </body></html>`;
 }, "D:/Proyectos/Personal/astro_shuk/astro/src/pages/view/posts/[id].astro", void 0);
 
 const $$file = "D:/Proyectos/Personal/astro_shuk/astro/src/pages/view/posts/[id].astro";

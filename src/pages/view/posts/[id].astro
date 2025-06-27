@@ -1,7 +1,10 @@
 ---
 export const prerender = false;
 
-import { api } from "@/config/app";
+import { api, app } from "@/config/app";
+import { webRoutes } from "@/config/webRoutes";
+import { appLoadImage } from "@/modules/core/utilities/img/convert";
+import { serializeText } from "@/modules/core/utilities/lettersAndComponents";
 import type { PostData } from "@/modules/web/hooks/post/PostI";
 import { PostWrapper } from "@/wrapers/PostWrapper";
 const { id } = Astro.params;
@@ -35,10 +38,15 @@ try {
 
 <html lang="es">
   <head>
+    <meta property="og:url"                content={`${app.host}${webRoutes.view_posts.path.replace(':id', String(post?.id))}`} />
+    <meta property="og:type"               content="article" />
+    <meta property="og:title"              content={`${serializeText(post?.description || post?.title || '')}`} />
+    <meta property="og:description"        content={`${serializeText(post?.description || post?.title || '')}`} />
+    <meta property="og:image"              content={`${appLoadImage(post?.img?.path || '')}`} />
+    <meta property="og:image:alt" content={`${  serializeText(post?.description ?? '') }`} />
+    <meta property="fb:app_id" content={`${  app.oAuthIdFacebook }`} />
     <meta charset="utf-8" />
     <title>{post?.description}</title>
-    <meta name="description" content={post?.description || ""} />
-    <meta property="og:title" content={post?.description} />
   </head>
   <body>
     <PostWrapper client:only="react" post={post} error={errorApi} />
