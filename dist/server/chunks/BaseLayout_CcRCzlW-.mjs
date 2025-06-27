@@ -1,9 +1,9 @@
-import { e as createComponent, f as createAstro, h as addAttribute, r as renderTemplate, k as renderHead, l as renderComponent, n as renderSlot } from './astro/server_CWzBM8L3.mjs';
+import { e as createAstro, f as createComponent, h as addAttribute, r as renderTemplate, k as renderHead, l as renderComponent, n as renderSlot } from './astro/server_DPEOJoPK.mjs';
 import 'kleur/colors';
 import 'clsx';
 /* empty css                         */
 
-const $$Astro$1 = createAstro();
+const $$Astro$1 = createAstro("https://shuk.ec");
 const $$MetaHtml = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$MetaHtml;
@@ -11,7 +11,7 @@ const $$MetaHtml = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`<meta${addAttribute(property, "property")}${addAttribute(content, "content")}>`;
 }, "D:/Proyectos/Personal/astro_shuk/astro/src/components/MetaHtml.astro", void 0);
 
-const $$Astro = createAstro();
+const $$Astro = createAstro("https://shuk.ec");
 const $$BaseLayout = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$BaseLayout;

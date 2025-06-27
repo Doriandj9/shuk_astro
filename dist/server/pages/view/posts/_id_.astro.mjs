@@ -1,9 +1,9 @@
-import { e as createComponent, f as createAstro, h as addAttribute, k as renderHead, l as renderComponent, r as renderTemplate } from '../../../chunks/astro/server_CWzBM8L3.mjs';
+import { e as createAstro, f as createComponent, h as addAttribute, k as renderHead, l as renderComponent, r as renderTemplate } from '../../../chunks/astro/server_DPEOJoPK.mjs';
 import 'kleur/colors';
 import axios from 'axios';
 export { renderers } from '../../../renderers.mjs';
 
-const host = "http://localhost:8000";
+const host = "https://api.shuk.ec";
 const versionApp = "v1";
 const endPointApi = "/api";
 const apiWhatsAppHost = "https://api.whatsapp.com/send";
@@ -11,7 +11,7 @@ const shareFacebookHost = "https://www.facebook.com/sharer/sharer.php";
 const idFacebook = "1896772931078211";
 const idGoogle = "688681171370-3vstsdcqqni44798pbstcbik4fr5n6ta.apps.googleusercontent.com";
 const hostApp = "http://localhost:5173";
-const emailContact = "shu@email.com";
+const emailContact = "shuk@email.com";
 const app = {
   server: `${host}${endPointApi}/`,
   base_server: host,
@@ -57,7 +57,7 @@ const api = axios.create({
   }
 });
 
-const $$Astro = createAstro();
+const $$Astro = createAstro("https://shuk.ec");
 const prerender = false;
 const $$id = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
@@ -86,7 +86,7 @@ const $$id = createComponent(async ($$result, $$props, $$slots) => {
 }, "D:/Proyectos/Personal/astro_shuk/astro/src/pages/view/posts/[id].astro", void 0);
 
 const $$file = "D:/Proyectos/Personal/astro_shuk/astro/src/pages/view/posts/[id].astro";
-const $$url = "/view/posts/[id]";
+const $$url = "/view/posts/*/view/posts/[id]";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
     __proto__: null,

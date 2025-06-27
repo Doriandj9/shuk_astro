@@ -1,4 +1,4 @@
-import { e as createComponent, k as renderHead, l as renderComponent, r as renderTemplate } from '../../chunks/astro/server_CWzBM8L3.mjs';
+import { f as createComponent, k as renderHead, l as renderComponent, r as renderTemplate } from '../../chunks/astro/server_DPEOJoPK.mjs';
 import 'kleur/colors';
 export { renderers } from '../../renderers.mjs';
 
@@ -7,7 +7,7 @@ const $$Login = createComponent(($$result, $$props, $$slots) => {
 }, "D:/Proyectos/Personal/astro_shuk/astro/src/pages/auth/login.astro", void 0);
 
 const $$file = "D:/Proyectos/Personal/astro_shuk/astro/src/pages/auth/login.astro";
-const $$url = "/auth/login";
+const $$url = "/view/posts/*/auth/login";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
     __proto__: null,
