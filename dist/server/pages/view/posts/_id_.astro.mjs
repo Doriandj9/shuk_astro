@@ -86,7 +86,7 @@ const $$id = createComponent(async ($$result, $$props, $$slots) => {
 }, "D:/Proyectos/Personal/astro_shuk/astro/src/pages/view/posts/[id].astro", void 0);
 
 const $$file = "D:/Proyectos/Personal/astro_shuk/astro/src/pages/view/posts/[id].astro";
-const $$url = "/view/posts/*/view/posts/[id]";
+const $$url = "/view/posts/[id]";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
     __proto__: null,

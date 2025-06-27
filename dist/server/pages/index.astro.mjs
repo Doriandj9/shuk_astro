@@ -10,7 +10,7 @@ Inicio
 }, "D:/Proyectos/Personal/astro_shuk/astro/src/pages/index.astro", void 0);
 
 const $$file = "D:/Proyectos/Personal/astro_shuk/astro/src/pages/index.astro";
-const $$url = "/view/posts/*";
+const $$url = "";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	__proto__: null,

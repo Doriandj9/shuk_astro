@@ -12,7 +12,7 @@ const ACTION_QUERY_PARAMS$1 = {
   actionName: "_action"};
 const ACTION_RPC_ROUTE_PATTERN = "/_actions/[...path]";
 
-const __vite_import_meta_env__ = {"ASSETS_PREFIX": undefined, "BASE_URL": "/view/posts/*", "DEV": false, "MODE": "production", "PROD": true, "PUBLIC_API_PORT": "8000", "PUBLIC_API_URL": "https://api.shuk.ec", "PUBLIC_API_WHATSAPP_URL": "https://api.whatsapp.com/send", "PUBLIC_APP_HOST": "http://localhost:5173", "PUBLIC_APP_NAME": "SHUK", "PUBLIC_APP_VERSION": "v1", "PUBLIC_EMAIL_CONTACT": "shuk@email.com", "PUBLIC_ENDPOINT_API": "/api", "PUBLIC_FACEBOOK_ID": "1896772931078211", "PUBLIC_GOOGLE_ID": "688681171370-3vstsdcqqni44798pbstcbik4fr5n6ta.apps.googleusercontent.com", "SITE": "https://shuk.ec", "SSR": true};
+const __vite_import_meta_env__ = {"ASSETS_PREFIX": undefined, "BASE_URL": "/", "DEV": false, "MODE": "production", "PROD": true, "PUBLIC_API_PORT": "8000", "PUBLIC_API_URL": "https://api.shuk.ec", "PUBLIC_API_WHATSAPP_URL": "https://api.whatsapp.com/send", "PUBLIC_APP_HOST": "http://localhost:5173", "PUBLIC_APP_NAME": "SHUK", "PUBLIC_APP_VERSION": "v1", "PUBLIC_EMAIL_CONTACT": "shuk@email.com", "PUBLIC_ENDPOINT_API": "/api", "PUBLIC_FACEBOOK_ID": "1896772931078211", "PUBLIC_GOOGLE_ID": "688681171370-3vstsdcqqni44798pbstcbik4fr5n6ta.apps.googleusercontent.com", "SITE": "https://shuk.ec", "SSR": true};
 const ACTION_QUERY_PARAMS = ACTION_QUERY_PARAMS$1;
 const codeToStatusMap = {
   // Implemented from IANA HTTP Status Code Registry

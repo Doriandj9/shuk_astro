@@ -10,7 +10,7 @@ test
 }, "D:/Proyectos/Personal/astro_shuk/astro/src/pages/test.astro", void 0);
 
 const $$file = "D:/Proyectos/Personal/astro_shuk/astro/src/pages/test.astro";
-const $$url = "/view/posts/*/test";
+const $$url = "/test";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	__proto__: null,

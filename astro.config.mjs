@@ -10,7 +10,6 @@ import node from '@astrojs/node';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://shuk.ec',
-  base: '/view/posts/*',
   trailingSlash: 'never',
   output: 'server',
   adapter: node({

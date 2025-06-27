@@ -7,7 +7,7 @@ const $$Login = createComponent(($$result, $$props, $$slots) => {
 }, "D:/Proyectos/Personal/astro_shuk/astro/src/pages/auth/login.astro", void 0);
 
 const $$file = "D:/Proyectos/Personal/astro_shuk/astro/src/pages/auth/login.astro";
-const $$url = "/view/posts/*/auth/login";
+const $$url = "/auth/login";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
     __proto__: null,
