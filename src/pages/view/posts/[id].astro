@@ -4,7 +4,7 @@ export const prerender = false;
 import { api, app } from "@/config/app";
 import { webRoutes } from "@/config/webRoutes";
 import { appLoadImage } from "@/modules/core/utilities/img/convert";
-import { serializeText } from "@/modules/core/utilities/lettersAndComponents";
+import { decode } from 'entities';
 import type { PostData } from "@/modules/web/hooks/post/PostI";
 import { PostWrapper } from "@/wrapers/PostWrapper";
 const { id } = Astro.params;
@@ -34,6 +34,17 @@ try {
     };
   }
 }
+
+const serializeText = (text: string): string => {
+    const result = decode(
+        text
+            .replaceAll(/<br>/g, '\n\r')
+            .replaceAll(/(<)(\w+)(>)/g, '')
+            .replaceAll(/(<\/)(\w+)(>)/g, '')
+    );
+    return result;
+};
+
 ---
 
 <html lang="es">
