@@ -1,24 +1,21 @@
 ---
-import MetaHtml from "@/components/MetaHtml.astro";
-import "./../styles/main.css";
-import AppLayout from "@/modules/core/layouts/AppLayout";
+import "@/styles/main.css";
 
-type MetaDataType = {
+type Props = {
+    title: string;
+    metadata?: MetaProps[];
+};
+
+type MetaProps = {
     property: string;
     content: string;
 };
-type Props = {
-    metadata?: MetaDataType[];
-};
 
-const { metadata } = Astro.props;
+const { metadata, title } = Astro.props;
 ---
 
-<!doctype html>
-<html lang="en">
+<html lang="es">
     <head>
-        <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- FAVICON -->
         <link
@@ -140,26 +137,18 @@ const { metadata } = Astro.props;
         <meta property="og:url" content="https://shuk.ec" />
         <meta property="og:image" content="/shuk_logo.png" />
         <meta property="og:type" content="website" />
-        <!--  -->
 
-        {
-            metadata?.map((data) => {
-                return (
-                    <MetaHtml property={data.property} content={data.content} />
-                );
-            })
-        }
         <meta name="author" content="DigitalEducas" />
         <meta name="author" content="Dorian Armijos" />
-        <!-- <ClientRouter /> -->
-        <title>Shuk</title>
-    </head>
 
+        {
+            metadata?.map((m) => (
+                <meta property={m.property} content={m.content} />
+            ))
+        }
+        <title>{title}</title>
+    </head>
     <body>
-       <div>
-            <AppLayout client:only="react">
-                <slot />
-            </AppLayout>
-       </div>
+        <slot />
     </body>
 </html>

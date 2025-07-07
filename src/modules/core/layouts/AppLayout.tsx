@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import type { Children } from "../@types/core";
 import { useEffect, useMemo } from "react";
 import { useThemeMode } from "@/store/themeMode";
-import '@/styles/main.css';
 import {
   createTheme,
   CssBaseline,

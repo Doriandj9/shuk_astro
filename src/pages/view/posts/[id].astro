@@ -1,12 +1,12 @@
 ---
 export const prerender = false;
-
 import { api, app } from "@/config/app";
 import { webRoutes } from "@/config/webRoutes";
 import { appLoadImage } from "@/modules/core/utilities/img/convert";
 import { decode } from 'entities';
 import type { PostData } from "@/modules/web/hooks/post/PostI";
 import { PostWrapper } from "@/wrapers/PostWrapper";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 const { id } = Astro.params;
 let errorApi: null | Error = null;
 let post: PostData | null = null;
@@ -45,21 +45,40 @@ const serializeText = (text: string): string => {
     return result;
 };
 
+
+const metaTags = [
+  {
+    property: "og:url",
+    content: `${app.host}${webRoutes.view_posts.path.replace(':id', String(post?.id))}`,
+  },
+  {
+    property: "og:type",
+    content: "article",
+  },
+  {
+    property: "og:title",
+    content: `${serializeText(post?.description || post?.title || '')}`,
+  },
+  {
+    property: "og:description",
+    content: `${serializeText(post?.description || post?.title || '')}`,
+  },
+  {
+    property: "og:image",
+    content: `${appLoadImage(post?.img?.path || '')}`,
+  },
+  {
+    property: "og:image:alt",
+    content: `${serializeText(post?.description ?? '')}`,
+  },
+  {
+    property: "fb:app_id",
+    content: `${app.oAuthIdFacebook}`,
+  },
+];
+
 ---
 
-<html lang="es">
-  <head>
-    <meta property="og:url"                content={`${app.host}${webRoutes.view_posts.path.replace(':id', String(post?.id))}`} />
-    <meta property="og:type"               content="article" />
-    <meta property="og:title"              content={`${serializeText(post?.description || post?.title || '')}`} />
-    <meta property="og:description"        content={`${serializeText(post?.description || post?.title || '')}`} />
-    <meta property="og:image"              content={`${appLoadImage(post?.img?.path || '')}`} />
-    <meta property="og:image:alt" content={`${  serializeText(post?.description ?? '') }`} />
-    <meta property="fb:app_id" content={`${  app.oAuthIdFacebook }`} />
-    <meta charset="utf-8" />
-    <title>{post?.description}</title>
-  </head>
-  <body>
+<BaseLayout title={serializeText(post?.description ?? '')} metadata={metaTags}>
     <PostWrapper client:only="react" post={post} error={errorApi} />
-  </body>
-</html>
+</BaseLayout>
