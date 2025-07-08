@@ -1,5 +1,6 @@
 ---
 import "@/styles/main.css";
+import loader from "./../../public/ball-triangle.svg";
 
 type Props = {
     title: string;
@@ -16,6 +17,8 @@ const { metadata, title } = Astro.props;
 
 <html lang="es">
     <head>
+        <meta charset="UTF-8" />
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- FAVICON -->
         <link
@@ -148,7 +151,32 @@ const { metadata, title } = Astro.props;
         }
         <title>{title}</title>
     </head>
+
     <body>
-        <slot />
+        <div id="loader">
+            <span class="text-slate-600 text-xl">SHUK...</span>
+            <img src={loader.src} alt="loading..." />
+        </div>
+        <div id="root-astro">
+            <slot />
+        </div>
+        <script>
+            const el = document.getElementById("root-astro");
+            if (el) {
+                const islandElement = Array.from(el.children)[2];
+                setInterval(() => {
+                    if(islandElement.children.length > 0){
+                        const event = new CustomEvent('load:astro-island',{detail: true});
+                        window.dispatchEvent(event);
+                    }
+                },1000);
+                islandElement.addEventListener('load', () => {
+                    console.log('load');
+                });
+            }
+            window.addEventListener("load:astro-island", () => {
+                window.document.body.classList.add("loaded");
+            });
+        </script>
     </body>
 </html>
