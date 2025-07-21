@@ -1,3 +1,5 @@
+import { useSetAppTitle } from "@/modules/core/utilities/titles";
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 
@@ -5,7 +7,10 @@ import { useTranslation } from "react-i18next";
 export const Privacy = () => {
     const [t] = useTranslation('web');
     const [t_core] = useTranslation('core');
-
+    const {setTitleApp} = useSetAppTitle();
+    useEffect(() => {
+        setTitleApp(t('privacy.privacy-polity.title'));
+    },[]);
     return (
             <div className="app-container-fade h-full w-full">
                 <h2 className="text-xl text-center text-mode-white font-bold pt-2">
