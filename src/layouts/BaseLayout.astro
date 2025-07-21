@@ -112,7 +112,9 @@ const { metadata, title } = Astro.props;
         />
         <meta name="language" content="es-EC" />
         <meta property="og:locale" content="es_EC" />
-        <meta
+        {
+            !metadata &&(
+            <meta
             property="og:title"
             content="Shuk - Plataforma Social de Imágenes"
         />
@@ -121,7 +123,9 @@ const { metadata, title } = Astro.props;
             content="Conecta con personas de todo el mundo a través de imágenes y contenido visual en Shuk. Disponible en español e inglés."
         />
         <meta property="og:url" content="https://shuk.ec" />
-        <meta property="og:image" content="/" />
+        <meta property="og:image" content="/shuk_logo.png" />
+        )
+        }
         <meta property="og:type" content="website" />
 
         <!-- Meta Etiquetas para Inglés -->
@@ -135,17 +139,23 @@ const { metadata, title } = Astro.props;
         />
         <meta name="language" content="en-US" />
         <meta property="og:locale" content="en_US" />
-        <meta
-            property="og:title"
-            content="Shuk - Image-Based Social Platform"
-        />
-        <meta
-            property="og:description"
-            content="Connect with people worldwide through images and visual content on Shuk. Available in Spanish and English."
-        />
-        <meta property="og:url" content="https://shuk.ec" />
-        <meta property="og:image" content="/shuk_logo.png" />
-        <meta property="og:type" content="website" />
+        
+        {
+        !metadata && (
+            <meta
+                property="og:title"
+                content="Shuk - Image-Based Social Platform"
+            />
+            <meta
+                property="og:description"
+                content="Connect with people worldwide through images and visual content on Shuk. Available in Spanish and English."
+            />
+            <meta property="og:url" content="https://shuk.ec" />
+            <meta property="og:image" content="/shuk_logo.png" />
+            <meta property="og:type" content="website" />
+        )
+        }
+            
 
         <meta name="author" content="DigitalEducas" />
         <meta name="author" content="Dorian Armijos" />
