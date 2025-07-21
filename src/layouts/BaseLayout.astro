@@ -2,6 +2,23 @@
 import "@/styles/main.css";
 import loader from "./../../public/ball-triangle.svg";
 
+import favicon1 from './../assets/favicon/apple-icon-57x57.png';
+import favicon2 from './../assets/favicon/apple-icon-60x60.png';
+import favicon3 from './../assets/favicon/apple-icon-72x72.png';
+import favicon4 from './../assets/favicon/apple-icon-76x76.png';
+import favicon5 from './../assets/favicon/apple-icon-114x114.png';
+import favicon6 from './../assets/favicon/apple-icon-120x120.png';
+import favicon7 from './../assets/favicon/apple-icon-144x144.png';
+import favicon8 from './../assets/favicon/apple-icon-152x152.png';
+import favicon9 from './../assets/favicon/apple-icon-180x180.png';
+import favicon10 from './../assets/favicon/android-icon-192x192.png';
+import favicon11 from './../assets/favicon/favicon-32x32.png';
+import favicon12 from './../assets/favicon/favicon-96x96.png';
+import favicon13 from './../assets/favicon/favicon-16x16.png';
+import manifest from './../assets/favicon/manifest.json';
+import msTileImage from './../assets/favicon/ms-icon-144x144.png';
+
+
 type Props = {
     title: string;
     metadata?: MetaProps[];
@@ -14,6 +31,7 @@ type MetaProps = {
 
 const { metadata, title } = Astro.props;
 
+
 ---
 
 <html lang="es">
@@ -21,77 +39,22 @@ const { metadata, title } = Astro.props;
         <meta charset="UTF-8" />
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- FAVICON -->
-        <link
-            rel="apple-touch-icon"
-            sizes="57x57"
-            href="/assets/favicon/apple-icon-57x57.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="60x60"
-            href="/assets/favicon/apple-icon-60x60.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="72x72"
-            href="/assets/favicon/apple-icon-72x72.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="76x76"
-            href="/assets/favicon/apple-icon-76x76.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="114x114"
-            href="/assets/favicon/apple-icon-114x114.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="120x120"
-            href="/assets/favicon/apple-icon-120x120.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="144x144"
-            href="/assets/favicon/apple-icon-144x144.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="152x152"
-            href="/assets/favicon/apple-icon-152x152.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/assets/favicon/apple-icon-180x180.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="192x192"
-            href="/assets/favicon/android-icon-192x192.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/assets/favicon/favicon-32x32.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="96x96"
-            href="/assets/favicon/favicon-96x96.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/assets/favicon/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/assets/favicon/manifest.json" />
+        <link rel="apple-touch-icon" sizes="57x57" href={favicon1.src} />
+        <link rel="apple-touch-icon" sizes="60x60" href={favicon2.src} />
+        <link rel="apple-touch-icon" sizes="72x72" href={favicon3.src} />
+        <link rel="apple-touch-icon" sizes="76x76" href={favicon4.src} />
+        <link rel="apple-touch-icon" sizes="114x114" href={favicon5.src} />
+        <link rel="apple-touch-icon" sizes="120x120" href={favicon6.src} />
+        <link rel="apple-touch-icon" sizes="144x144" href={favicon7.src} />
+        <link rel="apple-touch-icon" sizes="152x152" href={favicon8.src} />
+        <link rel="apple-touch-icon" sizes="180x180" href={favicon9.src} />
+        <link rel="icon" type="image/png" sizes="192x192" href={favicon10.src} />
+        <link rel="icon" type="image/png" sizes="32x32" href={favicon11.src} />
+        <link rel="icon" type="image/png" sizes="96x96" href={favicon12.src} />
+        <link rel="icon" type="image/png" sizes="16x16" href={favicon13.src} />
+        <link rel="manifest" href={manifest.name} />
+        <meta name="msapplication-TileImage" content={msTileImage.src} />
+
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
