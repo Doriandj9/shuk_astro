@@ -1,0 +1,10 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import {PrivacyWrapper} from '@/wrapers/PrivacyWrapper';
+
+
+---
+
+<BaseLayout title="Privacy Policy">
+    <PrivacyWrapper client:only="react" />
+</BaseLayout>

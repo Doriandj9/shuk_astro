@@ -1,4 +1,3 @@
-import AppLayout from "@/modules/core/layouts/AppLayout";
 import { useTranslation } from "react-i18next";
 
 
@@ -8,7 +7,6 @@ export const TermsOfService = () => {
     const [t_core] = useTranslation('core');
 
     return (
-        <AppLayout>
             <div className="app-container-fade h-full w-full">
                 <h2 className="text-xl text-center text-mode-white font-bold pt-2">
                     {t('terms-of-service.privacy-polity.title')}
@@ -92,6 +90,5 @@ export const TermsOfService = () => {
                     </div>
                 </div>
             </div>
-        </AppLayout>
     );
 };
