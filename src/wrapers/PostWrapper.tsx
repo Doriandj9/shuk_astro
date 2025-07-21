@@ -3,16 +3,16 @@ import type { PostData } from "@/modules/web/hooks/post/PostI";
 import AppLayout from "@/modules/core/layouts/AppLayout";
 
 type PostWrapperProps = {
-    post: PostData | null;
-    error: Error | null;
-
+    // post: PostData | null;
+    // error: Error | null;
+    id: string | null;
 };
 
-export const PostWrapper: React.FC<PostWrapperProps> = ({post, error}) => {
+export const PostWrapper: React.FC<PostWrapperProps> = ({id}) => {
 
     return (
         <AppLayout>
-            <ViewPosts post={post} error={error} isLoading={false}   />
+            <ViewPosts id={id} />
         </AppLayout>
     );
 };

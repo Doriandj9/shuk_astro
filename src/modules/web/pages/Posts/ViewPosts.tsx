@@ -1,12 +1,37 @@
 import AppLoadingPosts from "@/modules/core/components/AppLoadinPosts";
+import { useParams } from "react-router-dom";
+import { useGetPost } from "../../hooks/post/hooks";
+import AppLayout from "@/modules/core/layouts/AppLayout";
 import AppLoadingComments from "@/modules/core/components/AppLoadinComments";
 import AppDisplayPost from "@/modules/core/components/AppDisplayPost";
+import { setMetaData } from "@/modules/core/utilities/metaData";
+import { useMemo } from "react";
+import { setAppTitle } from "@/modules/core/utilities/titles";
+import { serializeText } from "@/modules/core/utilities/lettersAndComponents";
 
-import type { PostData } from "../../hooks/post/PostI";
+type ViewPostsProps = {
+    id: string | null;
+};
 
-const ViewPosts = ({post, isLoading, error}: {post: PostData | null; isLoading: boolean;error: Error | null}) => {
+const ViewPosts:React.FC<ViewPostsProps> = ({id}) => {
+    const params = useParams();
 
-    
+    const { isLoading, data: post, isError, error } = useGetPost(id);
+
+    if(post){
+        const title = serializeText(post.description ?? '');
+        
+        setAppTitle(title.length > 50 ? `${title.substring(0,50)}...` : title);
+    }
+
+    useMemo(() => {
+        if (post) {
+            setMetaData(post);
+        }
+    },[post]);
+
+    console.log(id);
+
     return (
             <div className="flex flex-col gap-2 md:items-center">
                 {
@@ -28,7 +53,7 @@ const ViewPosts = ({post, isLoading, error}: {post: PostData | null; isLoading: 
                     </div>
                 }
                 {
-                    error &&
+                    isError &&
                     <div>
                         {error.message}
                     </div>

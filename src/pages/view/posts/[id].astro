@@ -85,5 +85,5 @@ const metaTags = [
 ---
 
 <BaseLayout title={serializeText(post?.description ?? "")} metadata={metaTags}>
-  <PostWrapper client:only="react" post={post} error={errorApi} />
+  <PostWrapper client:only="react" id={post?.id ? String(post.id) : null} />
 </BaseLayout>
