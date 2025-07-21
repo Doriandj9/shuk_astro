@@ -95,6 +95,12 @@ const { metadata, title } = Astro.props;
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
 
+        {
+            metadata?.map((m) => (
+                <meta property={m.property} content={m.content} />
+            ))
+        }
+
         <!-- Meta Etiquetas para Español -->
         <meta
             name="description"
@@ -144,11 +150,6 @@ const { metadata, title } = Astro.props;
         <meta name="author" content="DigitalEducas" />
         <meta name="author" content="Dorian Armijos" />
 
-        {
-            metadata?.map((m) => (
-                <meta property={m.property} content={m.content} />
-            ))
-        }
         <title>{title}</title>
     </head>
 
@@ -165,13 +166,15 @@ const { metadata, title } = Astro.props;
             if (el) {
                 const islandElement = Array.from(el.children)[2];
                 setInterval(() => {
-                    if(islandElement.children.length > 0){
-                        const event = new CustomEvent('load:astro-island',{detail: true});
+                    if (islandElement.children.length > 0) {
+                        const event = new CustomEvent("load:astro-island", {
+                            detail: true,
+                        });
                         window.dispatchEvent(event);
                     }
-                },1000);
-                islandElement.addEventListener('load', () => {
-                    console.log('load');
+                }, 1000);
+                islandElement.addEventListener("load", () => {
+                    console.log("load");
                 });
             }
             window.addEventListener("load:astro-island", () => {
