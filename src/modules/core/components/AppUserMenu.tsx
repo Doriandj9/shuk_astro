@@ -33,9 +33,9 @@ const AppUserMenu = () => {
         setAnchorEl(null);
     };
 
-    const handleProfile = () => {
-        navigate(webRoutes.dashboard_user.path.replace(':username', user?.username ?? '___'));
-    };
+    // const handleProfile = () => {
+    //     navigate(webRoutes.dashboard_user.path.replace(':username', user?.username ?? '___'));
+    // };
 
     const handleLogOut = () => {
         logout.mutate();
@@ -43,10 +43,10 @@ const AppUserMenu = () => {
         navigate(webRoutes.home.path);
     };
 
-    const handleConfig = () => {
-        handleClose();
-        navigate(webRoutes.config_user.path.replace(':username', user?.username ?? ''));
-    };
+    // const handleConfig = () => {
+    //     handleClose();
+    //     navigate(webRoutes.config_user.path.replace(':username', user?.username ?? ''));
+    // };
 
     const handleAdministration = () => {
         handleClose();
@@ -120,14 +120,18 @@ const AppUserMenu = () => {
                 anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
             >
 
-                <MenuItem onClick={handleProfile}>
+                <MenuItem>
+                <a href={webRoutes.dashboard_user.path.replace(':username', user?.username ?? '___')} className="inline-flex items-center">
                     <Avatar
                         src={user?.photo || profileImg.src}
                     /> {t('menu.profile')}
+                </a>
                 </MenuItem>
-                <MenuItem onClick={handleConfig} className="flex gap-3 items-center">
+                <MenuItem className="flex gap-3 items-center">
+                <a href={webRoutes.config_user.path.replace(':username', user?.username ?? '')}>
                     <SettingsIcon />
                     {t('mobile.menu.configuration')}
+                </a>
                 </MenuItem>
                 {
                     isAdmin &&

@@ -3,7 +3,6 @@ import React from 'react';
 import AppAvatar from './AppAvatar';
 import { mergeUserProvider } from '../utilities/mergeUserProvider';
 import { userDefault } from '@/config/app';
-import { Link } from 'react-router-dom';
 import { useUpdateNotifyUser } from '@/modules/web/hooks/notifications/hook';
 import { useAuthStore } from '@/store/auth';
 import { useLanguageApp } from '@/store/language';
@@ -35,10 +34,10 @@ const UserNotification: React.FC<UserNotificationProps> = ({
   };
 
   return (
-    <Link onClick={handleUpdate} to={notification.payload?.relative_path ?? ''}
+    <a onClick={handleUpdate} href={notification.payload?.relative_path ?? ''}
       className={`flex items-center justify-between p-2 w-full ${notification.doc_status === 'DR' || notification.doc_status === 'PN'
-        ? 'bg-gray-100 dark:bg-slate-400 '
-        : 'bg-white dark:bg-slate-500 '}
+        ? 'bg-gray-100 dark:bg-slate-400'
+        : 'bg-white dark:bg-slate-500'}
       rounded-lg shadow-md`}>
       <div className="flex items-center space-x-3">
         <div className="relative">
@@ -63,7 +62,7 @@ const UserNotification: React.FC<UserNotificationProps> = ({
       {(notification.doc_status === 'DR' || notification.doc_status === 'PN') && (
         <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
       )}
-    </Link>
+    </a>
   );
 };
 
