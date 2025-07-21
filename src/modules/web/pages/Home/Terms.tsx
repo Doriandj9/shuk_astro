@@ -1,4 +1,4 @@
-import { useSetAppTitle } from "@/modules/core/utilities/titles";
+import { setAppTitle } from "@/modules/core/utilities/titles";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -7,10 +7,9 @@ import { useTranslation } from "react-i18next";
 export const TermsOfService = () => {
     const [t] = useTranslation('web');
     const [t_core] = useTranslation('core');
-
-    const {setTitleApp} = useSetAppTitle();
+    
         useEffect(() => {
-            setTitleApp(t('terms-of-service.privacy-polity.title'));
+            setAppTitle(t('terms-of-service.privacy-polity.title'));
         },[]);
 
     return (
