@@ -13,6 +13,7 @@ type MetaProps = {
 };
 
 const { metadata, title } = Astro.props;
+
 ---
 
 <html lang="es">
@@ -97,7 +98,7 @@ const { metadata, title } = Astro.props;
 
         {
             metadata?.map((m) => (
-                <meta property={m.property} content={m.content} />
+                <meta property={m.property} content={m.property.includes('image') ? m.content.replaceAll(' ', '%20') : m.content} />
             ))
         }
 
