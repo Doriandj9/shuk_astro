@@ -39,9 +39,9 @@ const AppDisplayComment: React.FC<AppDisplayCommentProps> = ({ idPost, comment }
       <div id={`post-${idPost}-comment-${comment.id}`} className={`app-container-fade text-sm p-2 mt-2 w-full ${isCurrent === `post-${idPost}-comment-${comment.id}` ? 'animate-pulse border-2 border-mode-slate' : ''}`}>
         <div className="h-auto flex flex-col justify-between">
           <div className="flex gap-2">
-            <Link to={webRoutes.dashboard_user.path.replace(':username',mergeUserProvider(comment.user || JSON.parse(comment.payload_user || ''))?.username ?? '___')}>
+            <a href={webRoutes.dashboard_user.path.replace(':username',mergeUserProvider(comment.user || JSON.parse(comment.payload_user || ''))?.username ?? '___')}>
             <AppAvatar user={mergeUserProvider(comment.user || JSON.parse(comment.payload_user || ''))} />
-            </Link>
+            </a>
             <div className="w-full">
               <p className="bg-mode-comment max-h-26 text-sm p-2 overflow-auto rounded-lg mb-2">{comment.description}</p>
               <span className="text-xs text-mode-slate">{format(comment.created_at || moment().format('YYYY-MM-DD HH:mm'))}</span>

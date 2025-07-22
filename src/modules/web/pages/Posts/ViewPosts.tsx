@@ -30,7 +30,6 @@ const ViewPosts:React.FC<ViewPostsProps> = ({id}) => {
         }
     },[post]);
 
-    console.log(id);
 
     return (
             <div className="flex flex-col gap-2 md:items-center">
