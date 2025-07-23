@@ -232,6 +232,9 @@ export const useUpdatePost = (id: number | string) => {
                 rollback();
             }
         },
+        onSuccess(){
+            client.invalidateQueries({queryKey: ['posts',String(id)]});
+        }
     });
 
     return { put };
@@ -287,7 +290,7 @@ export const useUpdateSharedPost = (id: number | string) => {
 
 export const useGetPost = (id: number | string | null) => {
     const hook = useQuery({
-        queryKey: ['posts', id],
+        queryKey: ['posts', String(id)],
         queryFn: () => getPost(id ?? ''),
         enabled: !!id,
         refetchInterval: app.timeRefetchInterval
