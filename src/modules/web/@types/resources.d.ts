@@ -172,7 +172,8 @@ interface Resources {
       "hidden-phone": "Ocultar numero de celular",
       "theme-app": "Seleccione el tema de la aplicación",
       "hidden-posts": "No tiene configuración por favor agrega en configuración",
-      "post-already-hidden": "La publicación ya esta oculta"
+      "post-already-hidden": "La publicación ya esta oculta",
+      "welcome": "Bienvenido a Shuk 👍"
     },
     "helpers": {
       "email-not-show": "El correo electrónico no se mostrará públicamente.",
@@ -218,7 +219,7 @@ interface Resources {
         "a transparencia": "No vendemos ni compartimos tu información personal con terceros",
         "b transparencia": "Puedes consultar nuestra Política de Privacidad en todo momento",
         "c transparencia": "En caso de vulneración de datos, serás notificado con prontitud",
-        "Modificaciones y Terminación": "Modificaciones y Terminación",
+        "Modificaciones y Terminación": "Cambios en esta política",
         "a modificadores": "La plataforma <strong>SHUK</strong> se reserva el derecho de modificar, suspender o terminar los servicios en cualquier momento y sin previo aviso.",
         "b modificadores": "Los usuarios serán notificados de cualquier cambio de las políticas de privacidad a través de la plataforma <strong>SHUK</strong> y medios electrónicos."
       }
@@ -226,7 +227,7 @@ interface Resources {
     "terms-of-service": {
       "privacy-polity": {
         "title": "Términos y Condiciones",
-        "description": "Los presentes Términos y Condiciones regulan el uso del sitio web y servicios ofrecidos por <strong> SHUK </strong>, una plataforma dedicada a la motivación personal y las reflexiones de vida. Nuestro pro-pósito es inspirar, acompañar y aportar valor a través de contenidos como mensajes y videos. Al acceder, navegar o utilizar cualquiera de nuestros servicios, aceptas expresamente cumplir con estos Términos y Condiciones, así como con las políticas vigentes de privacidad y uso de datos.",
+        "description": "Los presentes Términos y Condiciones regulan el uso del sitio web y servicios ofrecidos por <strong> SHUK </strong>, una plataforma dedicada a la motivación personal y las reflexiones de vida. Nuestro propósito es inspirar, acompañar y aportar valor a través de contenidos como mensajes y videos.Al acceder, navegar o utilizar cualquiera de nuestros servicios, aceptas expresamente cumplir con estos Términos y Condiciones, así como con las políticas vigentes de privacidad y uso de datos.",
         "Definiciones": "Definiciones",
         "a Definiciones": "<strong>Usuario: </strong> Persona que navega, accede o utiliza los servicios ofrecidos por SHUK.",
         "b Definiciones": "<strong>Contenido: </strong> Publicaciones motivacionales, videos, textos, y cualquier otro material compartido por SHUK.",
@@ -237,7 +238,7 @@ interface Resources {
         "a Uso del Sitio": "El usuario se compromete a utilizar la plataforma SHUK de manera ética, legal, responsable y respetuosa, conforme a su propósito motivacional.",
         "b Uso del Sitio": "Queda estrictamente prohibido reproducir, distribuir o utilizar el contenido publicado en SHUK con fines comerciales o promocionales sin previa autorización por escrito.",
         "c Uso del Sitio": "Los comentarios, opiniones o aportes realizados por los usuarios deben mantener un lenguaje respetuoso y no vulnerar los derechos, dignidad o creencias de terceros.",
-        "Registro": "<strong>Registro:</strong> Usted acepta en todo momento los términos y condiciones cuando utiliza el servicio.",
+        "Registro": "Registro: Usted acepta en todo momento los términos y condiciones cuando utiliza el servicio.",
         "a Registro": "Sólo podrán acceder y hacer uso de sitio web las personas naturales mayores de 18 años o contar con la mayoría de edad legal según la legislación de su país de residencia.",
         "b Registro": "Nos reservamos el derecho de rechazar solicitudes de registro, a nuestra entera discreción y sin la obligación de proporcionar una razón específica.",
         "c Registro": "Antes de utilizar el servicio, es necesario completar personalmente el formulario de registro y leer, así como aceptar, las condiciones publicadas en la plataforma, incluyendo los términos y condiciones.",
