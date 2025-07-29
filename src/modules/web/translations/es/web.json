@@ -173,7 +173,8 @@
         "hidden-phone": "Ocultar numero de celular",
         "theme-app": "Seleccione el tema de la aplicación",
         "hidden-posts": "No tiene configuración por favor agrega en configuración",
-        "post-already-hidden": "La publicación ya esta oculta"
+        "post-already-hidden": "La publicación ya esta oculta",
+        "welcome": "Bienvenido a Shuk 👍"
 
     },
     "helpers": {
@@ -220,7 +221,7 @@
             "a transparencia": "No vendemos ni compartimos tu información personal con terceros", 
             "b transparencia": "Puedes consultar nuestra Política de Privacidad en todo momento", 
             "c transparencia": "En caso de vulneración de datos, serás notificado con prontitud",
-            "Modificaciones y Terminación": "Modificaciones y Terminación",
+            "Modificaciones y Terminación": "Cambios en esta política",
             "a modificadores": "La plataforma <strong>SHUK</strong> se reserva el derecho de modificar, suspender o terminar los servicios en cualquier momento y sin previo aviso.",
             "b modificadores": "Los usuarios serán notificados de cualquier cambio de las políticas de privacidad a través de la plataforma <strong>SHUK</strong> y medios electrónicos."
         }
@@ -228,7 +229,7 @@
     "terms-of-service":{
         "privacy-polity": {
             "title": "Términos y Condiciones",
-            "description": "Los presentes Términos y Condiciones regulan el uso del sitio web y servicios ofrecidos por <strong> SHUK </strong>, una plataforma dedicada a la motivación personal y las reflexiones de vida. Nuestro pro-pósito es inspirar, acompañar y aportar valor a través de contenidos como mensajes y videos. Al acceder, navegar o utilizar cualquiera de nuestros servicios, aceptas expresamente cumplir con estos Términos y Condiciones, así como con las políticas vigentes de privacidad y uso de datos.",
+            "description": "Los presentes Términos y Condiciones regulan el uso del sitio web y servicios ofrecidos por <strong> SHUK </strong>, una plataforma dedicada a la motivación personal y las reflexiones de vida. Nuestro propósito es inspirar, acompañar y aportar valor a través de contenidos como mensajes y videos.Al acceder, navegar o utilizar cualquiera de nuestros servicios, aceptas expresamente cumplir con estos Términos y Condiciones, así como con las políticas vigentes de privacidad y uso de datos.",
             "Definiciones": "Definiciones",
             "a Definiciones": "<strong>Usuario: </strong> Persona que navega, accede o utiliza los servicios ofrecidos por SHUK.",
             "b Definiciones": "<strong>Contenido: </strong> Publicaciones motivacionales, videos, textos, y cualquier otro material compartido por SHUK.",
